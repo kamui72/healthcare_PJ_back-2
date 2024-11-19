@@ -16,7 +16,7 @@ permissions:
 
 env:
   AZURE_CONTAINER_REGISTRY: acrhealthcare7
-  CONTAINER_NAME: sampleapp
+  CONTAINER_NAME: cae-healthcare
   CONTAINER_APP_NAME: aca-healthcare
   RESOURCE_GROUP: rg-healthcare-dev-001
 
