@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-w-0h%9@1bent)@f1w+(smg$(bycqns+y#elieu-#$q_w8aiheh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["aca-healthcare.gentlehill-3424531a.japaneast.azurecontainerapps.io"]
 
 
 # Application definition
