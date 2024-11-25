@@ -47,6 +47,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # ゲストユーザー管理ミドルウェア
+    'users.middleware.GuestUserMiddleware',  # ここでゲストユーザー用ミドルウェアを追加
 ]
 
 ROOT_URLCONF = "healthcare_API.urls"
@@ -121,3 +123,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# セッションの有効期限を設定 (例: 30分)
+SESSION_COOKIE_AGE = 1800  # 秒単位で指定
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # ブラウザを閉じたらセッションを終了

@@ -17,7 +17,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+# users/urls.py
+
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    # ゲストユーザーのダッシュボードを表示するビュー
+    path('guest-dashboard/', views.guest_dashboard, name='guest_dashboard'),
+
+    # ゲストユーザーから登録ユーザーへの昇格処理
+    path('upgrade-guest/', views.upgrade_guest_to_user, name='upgrade_guest'),
 ]
